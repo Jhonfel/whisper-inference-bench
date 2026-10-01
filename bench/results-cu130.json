@@ -1,0 +1,44 @@
+{
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "torch": "2.14.1+cu130",
+  "model": "openai/whisper-large-v3-turbo",
+  "batch_size": 16,
+  "utterances": 500,
+  "long_audio_minutes": 20.1,
+  "runs": [
+    {
+      "attention": "sdpa",
+      "wer": 0.01124344926155312,
+      "e2e_seconds": 4.979991359999985,
+      "e2e_realtime_factor": 241.67814269059366,
+      "e2e_peak_mib": 4835.20751953125,
+      "encoder_ms": 345.77841700001954,
+      "encoder_peak_mib": 2291.630859375,
+      "encoder_attention_calls": {}
+    },
+    {
+      "attention": "sage",
+      "wer": 0.011148165793234873,
+      "e2e_seconds": 4.991937685000266,
+      "e2e_realtime_factor": 241.099776969659,
+      "e2e_peak_mib": 4834.83251953125,
+      "encoder_ms": 338.11354899989965,
+      "encoder_peak_mib": 2291.255859375,
+      "encoder_attention_calls": {
+        "sage": 32
+      }
+    },
+    {
+      "attention": "sage3",
+      "wer": 0.011338732729871367,
+      "e2e_seconds": 5.009058593000191,
+      "e2e_realtime_factor": 240.27570054418692,
+      "e2e_peak_mib": 4834.83251953125,
+      "encoder_ms": 357.82515399978365,
+      "encoder_peak_mib": 2370.755859375,
+      "encoder_attention_calls": {
+        "sage3": 32
+      }
+    }
+  ]
+}

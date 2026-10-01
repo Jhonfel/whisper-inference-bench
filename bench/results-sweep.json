@@ -1,0 +1,106 @@
+{
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "torch": "2.8.0+cu128",
+  "model": "openai/whisper-large-v3-turbo",
+  "long_audio_minutes": 20,
+  "results": [
+    {
+      "attention": "sdpa",
+      "batch_size": 1,
+      "seconds": 12.721651114999986,
+      "x_realtime": 94.60682828197504,
+      "peak_gpu_mib": 1755.50146484375
+    },
+    {
+      "attention": "sdpa",
+      "batch_size": 2,
+      "seconds": 8.728906192000068,
+      "x_realtime": 137.8815439216248,
+      "peak_gpu_mib": 1959.25537109375
+    },
+    {
+      "attention": "sdpa",
+      "batch_size": 4,
+      "seconds": 5.839163497999834,
+      "x_realtime": 206.11771924390706,
+      "peak_gpu_mib": 2374.89111328125
+    },
+    {
+      "attention": "sdpa",
+      "batch_size": 8,
+      "seconds": 5.0600953679995655,
+      "x_realtime": 237.8522488155807,
+      "peak_gpu_mib": 3181.44970703125
+    },
+    {
+      "attention": "sdpa",
+      "batch_size": 16,
+      "seconds": 4.921587391000685,
+      "x_realtime": 244.54611223621623,
+      "peak_gpu_mib": 4811.33251953125
+    },
+    {
+      "attention": "sdpa",
+      "batch_size": 24,
+      "seconds": 4.82369797299998,
+      "x_realtime": 249.50879371733936,
+      "peak_gpu_mib": 6448.203125
+    },
+    {
+      "attention": "sdpa",
+      "batch_size": 32,
+      "seconds": 4.935019408999324,
+      "x_realtime": 243.88051246672717,
+      "peak_gpu_mib": 8071.58251953125
+    },
+    {
+      "attention": "sage",
+      "batch_size": 1,
+      "seconds": 12.744362710000132,
+      "x_realtime": 94.43823044643929,
+      "peak_gpu_mib": 1755.50146484375
+    },
+    {
+      "attention": "sage",
+      "batch_size": 2,
+      "seconds": 8.691665708999608,
+      "x_realtime": 138.47231391490396,
+      "peak_gpu_mib": 1959.25537109375
+    },
+    {
+      "attention": "sage",
+      "batch_size": 4,
+      "seconds": 5.773275856999135,
+      "x_realtime": 208.47004236613606,
+      "peak_gpu_mib": 2374.89111328125
+    },
+    {
+      "attention": "sage",
+      "batch_size": 8,
+      "seconds": 5.09681230499973,
+      "x_realtime": 236.13878449464772,
+      "peak_gpu_mib": 3181.44970703125
+    },
+    {
+      "attention": "sage",
+      "batch_size": 16,
+      "seconds": 4.85131748799995,
+      "x_realtime": 248.0882905472734,
+      "peak_gpu_mib": 4811.33251953125
+    },
+    {
+      "attention": "sage",
+      "batch_size": 24,
+      "seconds": 4.770066191000296,
+      "x_realtime": 252.3141219236648,
+      "peak_gpu_mib": 6448.203125
+    },
+    {
+      "attention": "sage",
+      "batch_size": 32,
+      "seconds": 4.89545688599992,
+      "x_realtime": 245.85142725736995,
+      "peak_gpu_mib": 8072.83251953125
+    }
+  ]
+}

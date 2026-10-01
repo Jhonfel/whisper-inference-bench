@@ -1,0 +1,78 @@
+{
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "torch": "2.8.0+cu128",
+  "batch_size": 16,
+  "utterances": 500,
+  "long_audio_minutes": 20.1,
+  "results": [
+    {
+      "setup": "openai-whisper large-v3",
+      "wer": 0.017341591233920914,
+      "long_seconds": 49.603417296999396,
+      "x_realtime": 24.263551345540165,
+      "peak_gpu_mib": 6479.5029296875,
+      "phrase_latency_ms_median": 183.37927799984755
+    },
+    {
+      "setup": "openai-whisper turbo",
+      "wer": 0.01152929966650786,
+      "long_seconds": 9.293874154999685,
+      "x_realtime": 129.4998234780855,
+      "peak_gpu_mib": 3381.0908203125,
+      "phrase_latency_ms_median": 56.15901749979457
+    },
+    {
+      "setup": "transformers large-v3 sdpa",
+      "wer": 0.01067174845164364,
+      "long_seconds": 26.81985290800003,
+      "x_realtime": 44.87552808841075,
+      "peak_gpu_mib": 23810.08447265625,
+      "phrase_latency_ms_median": 213.61129549995894
+    },
+    {
+      "setup": "transformers large-v3-turbo eager",
+      "wer": 0.01124344926155312,
+      "long_seconds": 5.2776896949999355,
+      "x_realtime": 228.04581778277793,
+      "peak_gpu_mib": 6050.380859375,
+      "phrase_latency_ms_median": 79.55737899965243
+    },
+    {
+      "setup": "transformers large-v3-turbo sdpa",
+      "wer": 0.01124344926155312,
+      "long_seconds": 4.718668860999969,
+      "x_realtime": 255.58055365309684,
+      "peak_gpu_mib": 4811.33251953125,
+      "phrase_latency_ms_median": 62.93941849980911,
+      "long_seconds_runs": [
+        4.72,
+        4.55,
+        4.73
+      ],
+      "phrase_latency_ms_runs": [
+        62.9,
+        62.4,
+        63.0
+      ]
+    },
+    {
+      "setup": "transformers large-v3-turbo sage",
+      "wer": 0.011148165793234873,
+      "long_seconds": 4.978900714999327,
+      "x_realtime": 242.2221428049029,
+      "peak_gpu_mib": 4811.33251953125,
+      "phrase_latency_ms_median": 68.32528899940371,
+      "long_seconds_runs": [
+        5.4,
+        4.55,
+        4.98
+      ],
+      "phrase_latency_ms_runs": [
+        69.2,
+        61.7,
+        68.3
+      ]
+    }
+  ],
+  "note": "turbo sdpa/sage: median of 3 separate processes (runs listed); other setups: single process, median of 3 passes"
+}

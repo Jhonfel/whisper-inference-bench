@@ -1,0 +1,155 @@
+{
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "torch": "2.14.1+cu130",
+  "model": "openai/whisper-large-v3-turbo",
+  "batch": 16,
+  "results": [
+    {
+      "attention_impl": "sdpa",
+      "attention_ms": 38.46,
+      "matmul_ms": 209.38,
+      "other_ms": 76.46,
+      "total_ms": 324.3,
+      "top_kernels": [
+        {
+          "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_f16_s16816gemm_relu_f16_128x256_32x3_tn_align8>(",
+          "ms": 113.26,
+          "category": "matmul"
+        },
+        {
+          "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_f16_s16816gemm_relu_f16_64x128_64x3_tn_align8>(c",
+          "ms": 77.67,
+          "category": "matmul"
+        },
+        {
+          "kernel": "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false",
+          "ms": 38.46,
+          "category": "attention"
+        },
+        {
+          "kernel": "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:",
+          "ms": 34.31,
+          "category": "other"
+        },
+        {
+          "kernel": "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:",
+          "ms": 22.93,
+          "category": "other"
+        },
+        {
+          "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_f16_s16816gemm_relu_f16_256x128_32x3_tn_align8>(",
+          "ms": 16.73,
+          "category": "matmul"
+        },
+        {
+          "kernel": "void at::native::vectorized_elementwise_kernel<4, at::native::GeluCUDAKernelImpl(at::Tenso",
+          "ms": 11.03,
+          "category": "other"
+        },
+        {
+          "kernel": "void at::native::(anonymous namespace)::vectorized_layer_norm_kernel<c10::Half, float, fal",
+          "ms": 4.7,
+          "category": "other"
+        }
+      ]
+    },
+    {
+      "attention_impl": "sage",
+      "attention_ms": 24.55,
+      "matmul_ms": 210.64,
+      "other_ms": 81.77,
+      "total_ms": 316.96,
+      "top_kernels": [
+        {
+          "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_f16_s16816gemm_relu_f16_128x256_32x3_tn_align8>(",
+          "ms": 113.28,
+          "category": "matmul"
+        },
+        {
+          "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_f16_s16816gemm_relu_f16_64x128_64x3_tn_align8>(c",
+          "ms": 79.3,
+          "category": "matmul"
+        },
+        {
+          "kernel": "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:",
+          "ms": 35.82,
+          "category": "other"
+        },
+        {
+          "kernel": "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:",
+          "ms": 23.73,
+          "category": "other"
+        },
+        {
+          "kernel": "void qk_int_sv_f8_attn_kernel<128u, 64u, 32u, 64u, 64u, (DataType)1, (QuantGranularity)2, ",
+          "ms": 18.07,
+          "category": "attention"
+        },
+        {
+          "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_f16_s16816gemm_relu_f16_256x128_32x3_tn_align8>(",
+          "ms": 16.32,
+          "category": "matmul"
+        },
+        {
+          "kernel": "void at::native::vectorized_elementwise_kernel<4, at::native::GeluCUDAKernelImpl(at::Tenso",
+          "ms": 10.74,
+          "category": "other"
+        },
+        {
+          "kernel": "void at::native::(anonymous namespace)::vectorized_layer_norm_kernel<c10::Half, float, fal",
+          "ms": 4.65,
+          "category": "other"
+        }
+      ]
+    },
+    {
+      "attention_impl": "sage3",
+      "attention_ms": 22.26,
+      "matmul_ms": 213.88,
+      "other_ms": 98.68,
+      "total_ms": 334.82,
+      "top_kernels": [
+        {
+          "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_f16_s16816gemm_relu_f16_128x256_32x3_tn_align8>(",
+          "ms": 113.84,
+          "category": "matmul"
+        },
+        {
+          "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_f16_s16816gemm_relu_f16_64x128_64x3_tn_align8>(c",
+          "ms": 78.73,
+          "category": "matmul"
+        },
+        {
+          "kernel": "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:",
+          "ms": 47.13,
+          "category": "other"
+        },
+        {
+          "kernel": "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:",
+          "ms": 24.94,
+          "category": "other"
+        },
+        {
+          "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_f16_s16816gemm_relu_f16_256x128_32x3_tn_align8>(",
+          "ms": 17.22,
+          "category": "matmul"
+        },
+        {
+          "kernel": "void flash::compute_attn_ws<Flash_fwd_kernel_traits<64, 128, 128, 3, 1, true, cutlass::nv_",
+          "ms": 14.36,
+          "category": "attention"
+        },
+        {
+          "kernel": "void at::native::vectorized_elementwise_kernel<4, at::native::GeluCUDAKernelImpl(at::Tenso",
+          "ms": 10.22,
+          "category": "other"
+        },
+        {
+          "kernel": "void at::native::(anonymous namespace)::vectorized_layer_norm_kernel<c10::Half, float, fal",
+          "ms": 5.05,
+          "category": "other"
+        }
+      ]
+    }
+  ]
+}

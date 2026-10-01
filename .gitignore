@@ -1,0 +1,7 @@
+.venv*/
+__pycache__/
+*.egg-info/
+data/
+third_party/
+bench/*.nsys-rep
+README.preview.html
